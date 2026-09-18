@@ -50,10 +50,33 @@ cash_out_Btn.addEventListener("click",()=>{
     add_money.setAttribute("hidden",true)
 })
 
-add_money_btn.addEventListener("click",()=>{
-    current_amount.innerText = parseInt(add_money_Input.value) + parseInt(current_amount.innerText);
-})
 
-cash_out_btn.addEventListener("click",()=>{
-    current_amount.innerText = parseInt(current_amount.innerText) - parseInt(cash_out_Input.value);
-})
+
+add_money_btn.addEventListener("click", () => {
+
+    if (add_money_Input.value == "") {
+
+        alert("Please enter a valid amount");
+
+    } else {
+
+        current_amount.innerText =parseInt(current_amount.innerText) + parseInt(add_money_Input.value);
+        add_money_Input.value = "";
+
+    }
+
+});
+
+cash_out_btn.addEventListener("click", () => {
+
+    if (cash_out_Input.value == "") {
+
+        alert("Please enter a valid amount");
+
+    } else {
+
+        current_amount.innerText =parseInt(current_amount.innerText) - parseInt(cash_out_Input.value);
+        cash_out_Input.value = "";
+    }
+
+});
