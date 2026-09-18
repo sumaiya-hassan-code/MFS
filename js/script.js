@@ -73,7 +73,11 @@ cash_out_btn.addEventListener("click", () => {
 
         alert("Please enter a valid amount");
 
-    } else {
+    } else if (cash_out_Input.value > 1000){
+
+        alert("Please enter a valid amount");
+        
+    }else {
 
         current_amount.innerText =parseInt(current_amount.innerText) - parseInt(cash_out_Input.value);
         cash_out_Input.value = "";
