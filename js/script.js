@@ -15,10 +15,15 @@ firstScreenBtn.addEventListener("click", () => {
     } 
     else if (firstScreenPassword.value=="") {
         firstScreenErrorPIN.removeAttribute("hidden")
-    }
-    else {
+    }else if (firstScreenName.value=="1234" && firstScreenPassword.value=="1234") {
         secondScreen.removeAttribute("hidden")
         firstscreen.style.display="none"
+    }
+    else {
+        alert("Numner & Password error")
+        firstScreenName.value==""
+        firstScreenPassword.value==""
+
     }
 })
 
